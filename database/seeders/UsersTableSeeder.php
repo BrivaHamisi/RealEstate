@@ -4,9 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
-//use DB;
+use DB;
 
 class UsersTableSeeder extends Seeder
 {
@@ -44,7 +43,7 @@ class UsersTableSeeder extends Seeder
                 'password' => Hash::make('111'),
                 'role' => 'user',
                 'status' => 'active',
-            ]
+            ],
         ]);
     }
 }
