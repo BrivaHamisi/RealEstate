@@ -53,7 +53,8 @@
 
                             <h6 class="card-title">Update Admin Profile</h6>
 
-                            <form class="forms-sample">
+                            <form method="POST" action="{{route('admin.profile.store')}}" class="forms-sample" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                     <label for="exampleInputUsername1" class="form-label">Username</label>
                                     <input type="text" name="username" class="form-control" id="exampleInputUsername1" autocomplete="off" value="{{$profileData->username}}">
@@ -64,7 +65,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                                    <input type="email" name="emamil" class="form-control" id="exampleInputUsername1" autocomplete="off" value="{{$profileData->email}}">
+                                    <input type="email" name="email" class="form-control" id="exampleInputUsername1" autocomplete="off" value="{{$profileData->email}}">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Phone</label>
